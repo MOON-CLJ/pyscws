@@ -21,5 +21,6 @@ setup(
     description='a python package for scws',
     author_email='beijixuexiong@gmail.com, ysj.ray@gmail.com, liangjianglou@126.com',
     ext_modules=[scws_module],
-    py_modules=['scws_seg']
+    packages=['scwsseg'],
+    package_data={'scwsseg': ['data/*.txt', 'data/ext_stopword.dic']},
 )

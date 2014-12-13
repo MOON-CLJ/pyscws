@@ -1,0 +1,2 @@
+include scwsseg/data/*.txt
+include scwsseg/data/ext_stopword.dic
