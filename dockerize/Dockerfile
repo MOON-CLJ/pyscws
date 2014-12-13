@@ -5,7 +5,7 @@ MAINTAINER chenlijun
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
-     && apt-get install -y gcc python-dev
+     && apt-get install -y gcc python-dev libc6-dev
 
 # swcs
 ENV SWCS_DOWNLOAD_URL http://www.xunsearch.com/scws/down/scws-1.2.2.tar.bz2
@@ -14,7 +14,7 @@ ENV SWCS_DICT_CHS_UTF8_DOWNLOAD_URL http://www.xunsearch.com/scws/down/scws-dict
 ENV SWCS_DICT_CHT_UTF8_DOWNLOAD_URL http://www.xunsearch.com/scws/down/scws-dict-cht-utf8.tar.bz2
 
 
-RUN buildDeps='libc6-dev make curl bzip2'; \
+RUN buildDeps='make curl bzip2'; \
     set -x; \
     apt-get update && apt-get install -y $buildDeps --no-install-recommends \
     && mkdir -p /usr/src/swcs \
